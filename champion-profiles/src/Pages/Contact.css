@@ -1,0 +1,130 @@
+.contact-container {
+  font-family: "Arial", sans-serif;
+  color: #333;
+  padding: 20px;
+  max-width: 800px; /* Adjusted width for a more compact design */
+  margin: 0 auto;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.contact-header h1 {
+  font-size: 2.2rem; /* Slightly smaller header */
+  color: #0073e6;
+  margin: 0;
+}
+
+.contact-main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Reduced gap */
+}
+
+.contact-details {
+  background-color: #fff;
+  padding: 15px; /* Reduced padding */
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.contact-details p {
+  margin: 8px 0; /* Reduced margin */
+  line-height: 1.5;
+}
+
+.contact-details strong {
+  color: #0073e6;
+}
+
+.contact-form {
+  background-color: #fff;
+  padding: 15px; /* Reduced padding */
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+  font-size: 1.5rem; /* Slightly smaller heading */
+  color: #0073e6;
+  margin-bottom: 10px; /* Reduced margin */
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 8px; /* Reduced padding */
+  margin-bottom: 10px; /* Reduced margin */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px; /* Smaller font size */
+  width: 100%;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form button {
+  padding: 8px 15px; /* Reduced padding */
+  background-color: #0073e6;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px; /* Smaller font size */
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #005bb5;
+}
+
+.submission-confirmation {
+  background-color: #eafaf1;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.submission-confirmation h2 {
+  color: #4caf50;
+}
+
+.submission-confirmation p {
+  color: #333;
+}
+
+/* Footer Styling */
+.contact-footer {
+  background-color: #002b5b;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  width: 59%;
+  border-radius: 8px;
+  margin-top: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-footer 
+ p {
+  margin: 0;
+  font-size: 1rem;
+}
