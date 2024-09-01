@@ -22,18 +22,17 @@ header h1 {
     letter-spacing: 1px;
 }
 
-#logoutButton {
-    background-color: #e74c3c;
-    color: #fff;
+#logoutButton, #aboutUsButton, #contactUsButton {
+    padding: 10px 20px;
+    background-color: #ed0a0a;
+    color: white;
     border: none;
-    padding: 8px 16px;
+    border-radius: 20px;
     cursor: pointer;
-    border-radius: 4px;
-    transition: background-color 0.3s;
 }
 
-#logoutButton:hover {
-    background-color: #c0392b;
+#logoutButton:hover, #aboutUsButton:hover, #contactUsButton:hover {
+    background-color: #ed0a0a;
 }
 
 

@@ -2,19 +2,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 import ChampionCard from "../Components/ChampionCard";
 import "./Home.css"; 
+import Navbar from "../Components/Navbar";
 
 function Home() {
     return (
         <div>
-            <header className="navbar">
-                <h1>Know Your Favorite Sports Person</h1>
-                <div className="navbar-controls">
-                    <input type="text" placeholder="Search..." className="search-bar" />
-                    <button className="navbar-button">Home</button>
-                    <button className="navbar-button">About</button>
-                    <button className="navbar-button">Contact</button>
-                </div>
-            </header>
+
+        <Navbar/>
 
             <main>
                 <center>
@@ -100,11 +94,18 @@ function Home() {
                         profileLink="/athlete-profile/AB_de_Villiers"
                     />
                      <ChampionCard
-                        imgSrc="https://media.gettyimages.com/id/690026948/photo/london-england-ab-de-villiers-of-south-africa-poses-for-a-portrait-at-royal-garden-hotel-on.jpg?s=612x612&w=gi&k=20&c=c3fnAz69084UpoYEp3GgR2iushCF8f9GgPqLpWk_c-g="
-                        altText="AB de Villiers"
-                        name="AB_de_Villiers"
-                        profileLink="/athlete-profile/AB_de_Villiers"
+                        imgSrc="https://wallpapers.com/images/hd/sachin-tendulkar-1200-x-900-wallpaper-d8c4m34owpzpnyqq.jpg"
+                        altText="Sachin Tendulkar"
+                        name="Sachin Tendulkar"
+                        profileLink="/athlete-profile/Sachin Tendulkar"
                     />
+                     <ChampionCard
+                        imgSrc="https://assets.khelnow.com/news/uploads/2021/06/Lead-Pic_20-June-1.jpg"
+                        altText=" Milkha Singh"
+                        name=" Milkha Singh"
+                        profileLink="/athlete-profile/ Milkha Singh"
+                    />
+        
                 </div>
             </main>
 

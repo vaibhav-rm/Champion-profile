@@ -1,0 +1,140 @@
+/* Container Styling */
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f8f9fa;
+  color: #333;
+  font-family: 'Arial', sans-serif;
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
+}
+
+/* Header Styling */
+.contact-header {
+  background-color: #003366;
+  color: #fff;
+  padding: 10px 20px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+/* Main Content Styling */
+.contact-main {
+  background-color: #fff;
+  padding: 20px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  line-height: 1.6;
+  text-align: left;
+}
+
+/* Contact Details Styling */
+.contact-details {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.contact-details p {
+  margin: 10px 0;
+  line-height: 1.6;
+}
+
+.contact-details strong {
+  color: #0073e6;
+}
+
+/* Contact Form Styling */
+.contact-form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+  font-size: 1.5rem;
+  color: #0073e6;
+  margin-bottom: 15px;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  width: 100%;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form button {
+  padding: 10px 15px;
+  background-color: #0073e6;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #005bb5;
+}
+
+/* Submission Confirmation Styling */
+.submission-confirmation {
+  background-color: #eafaf1;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.submission-confirmation h2 {
+  color: #4caf50;
+}
+
+.submission-confirmation p {
+  color: #333;
+}
+
+/* Footer Styling */
+.contact-footer {
+  background-color: #003366;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: auto;
+}
