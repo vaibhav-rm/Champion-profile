@@ -1,14 +1,16 @@
-/* Navbar Styling */
+/* Navbar.css */
 .navbar {
     background-color: #002b5b;
     color: #fff;
     padding: 10px;
     position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .navbar-header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
 }
 
@@ -37,6 +39,8 @@
     border: none;
     border-radius: 5px;
     font-size: 1rem;
+    width: auto; /* Ensure input does not overflow */
+    max-width: 300px; /* Limit width for better mobile view */
 }
 
 /* Navbar Button Styling */
@@ -49,6 +53,9 @@
     cursor: pointer;
     font-size: 1rem;
     transition: background-color 0.3s ease;
+    flex: 1; /* Allow buttons to shrink or grow as needed */
+    text-align: center; /* Center text */
+    margin: 5px 0; /* Add some vertical margin */
 }
 
 .navbar-button:hover {
@@ -61,6 +68,14 @@
         display: none;
         flex-direction: column;
         gap: 0;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #002b5b;
+        padding: 10px;
+        box-sizing: border-box; /* Include padding in width */
+        z-index: 1000; /* Ensure it appears above other content */
     }
 
     .navbar-controls.open {
@@ -73,11 +88,12 @@
 
     .navbar-controls input {
         margin-bottom: 10px;
+        width: 100%; /* Full width for better mobile view */
     }
 
     .navbar-button {
-        width: 100%;
-        text-align: center;
-        margin-bottom: 10px;
+        width: 100%; /* Full width for buttons */
+        box-sizing: border-box; /* Include padding and border in width */
+        margin-bottom: 10px; /* Add margin between buttons */
     }
 }

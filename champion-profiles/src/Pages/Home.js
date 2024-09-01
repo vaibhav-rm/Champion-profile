@@ -109,8 +109,8 @@ function Home() {
                 </div>
             </main>
 
-            <footer>
-                <p>&copy; 2024 Favorite Sports Person</p>
+            <footer className="about-footer">
+                <p>&copy; 2024 Champions Profile</p>
             </footer>
         </div>
     );

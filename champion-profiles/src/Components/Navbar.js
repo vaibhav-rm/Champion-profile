@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import "./Navbar.css"; // Make sure to import your CSS file
+import { useNavigate } from "react-router-dom";
+import './Navbar.css'; // Ensure this path is correct
 
 function Navbar() {
     const [searchQuery, setSearchQuery] = useState("");
@@ -11,15 +11,29 @@ function Navbar() {
         setSearchQuery(e.target.value);
     };
 
-    const handleSearchSubmit = (e) => {
+    const handleSearchSubmit = async (e) => {
         e.preventDefault();
         if (searchQuery.trim() !== "") {
-            navigate(`/search?query=${encodeURIComponent(searchQuery)}`);
+            try {
+                const searchResponse = await fetch(
+                    `https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=${encodeURIComponent(searchQuery + " sports athlete")}&format=json&origin=*`
+                );
+                const searchData = await searchResponse.json();
+                
+                if (searchData.query.search.length > 0) {
+                    const pageTitle = searchData.query.search[0].title;
+                    navigate(`/search?query=${encodeURIComponent(pageTitle)}`);
+                } else {
+                    alert("No results found related to sports.");
+                }
+            } catch (error) {
+                console.error("Error fetching search results:", error);
+            }
         }
     };
 
     const toggleMenu = () => {
-        setIsMenuOpen(!isMenuOpen);
+        setIsMenuOpen(prev => !prev);
     };
 
     return (
@@ -40,15 +54,9 @@ function Navbar() {
                         onChange={handleInputChange}
                     />
                 </form>
-                <Link to="/">
-                    <button className="navbar-button">Home</button>
-                </Link>
-                <Link to="/aboutus">
-                    <button className="navbar-button">About</button>
-                </Link>
-                <Link to="/contact">
-                    <button className="navbar-button">Contact</button>
-                </Link>
+                <button className="navbar-button" onClick={() => navigate("/")}>Home</button>
+                <button className="navbar-button" onClick={() => navigate("/aboutus")}>About</button>
+                <button className="navbar-button" onClick={() => navigate("/contact")}>Contact</button>
             </div>
         </header>
     );
