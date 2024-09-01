@@ -1,51 +1,43 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import axios from 'axios';
+import './AthleteProfile.css';
 
 const AthleteProfile = () => {
     const { name } = useParams();
-    const [athleteData, setAthleteData] = useState(null);
-    const [loading, setLoading] = useState(true);
+    const [athleteData, setAthleteData] = useState({
+        title: 'N/A',
+        description: 'N/A',
+        imageFullUrl: '',
+    });
 
     useEffect(() => {
-        const fetchAthleteData = async () => {
-            setLoading(true);
+        const fetchData = async () => {
             try {
-                // Fetch data from Wikipedia API
-                const response = await fetch(`https://en.wikipedia.org/api/rest_v1/page/summary/${name}`);
-                const data = await response.json();
-                setAthleteData(data);
+                // Fetch Wikipedia summary data
+                const response = await axios.get(`https://api.allorigins.win/get?url=${encodeURIComponent(`https://en.wikipedia.org/api/rest_v1/page/summary/${name}`)}`);
+                const data = JSON.parse(response.data.contents);
+
+                // Set the data to state
+                setAthleteData({
+                    title: data.title || 'N/A',
+                    description: data.extract || 'N/A',
+                    imageFullUrl: data.originalimage ? data.originalimage.source : '',
+                });
+
             } catch (error) {
-                console.error('Error fetching athlete data:', error);
-            } finally {
-                setLoading(false);
+                console.error('Error fetching Wikipedia data:', error);
             }
         };
 
-        fetchAthleteData();
+        fetchData();
     }, [name]);
 
-    if (loading) return <p>Loading athlete data...</p>;
-    if (!athleteData) return <p>No data found.</p>;
-
     return (
-        <div>
-            <header>
-                <h1>{athleteData.title}</h1>
-            </header>
-            <main>
-                <section id="bio">
-                    <h2>Biography</h2>
-                    <p>{athleteData.extract}</p>
-                </section>
-                <section id="gallery">
-                    <h2>Gallery</h2>
-                    <div className="photo-gallery">
-                        {athleteData.thumbnail && (
-                            <img src={athleteData.thumbnail.source} alt={athleteData.title} />
-                        )}
-                    </div>
-                </section>
-            </main>
+        <div className="athlete-profile">
+            <h1>{athleteData.title}</h1>
+            {athleteData.imageFullUrl && <img src={athleteData.imageFullUrl} alt={athleteData.title} />}
+            <p>{athleteData.description}</p>
         </div>
     );
 };

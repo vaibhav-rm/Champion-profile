@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function ChampionCard({ imgSrc, altText, name, profileLink }) {
+function ChampionCard({ imgSrc, altText, name }) {
     return (
         <div className="photo-item">
             <img src={imgSrc} alt={altText} />
             <p>{name}</p>
-            <Link to={profileLink}><button className="more-button">More</button></Link>
+            <Link to={`/athlete-profile/${name}`}><button className="more-button">More</button></Link>
         </div>
     );
 }

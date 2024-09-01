@@ -1,0 +1,46 @@
+.athlete-profile {
+    padding: 20px;
+    text-align: center;
+}
+
+
+.athlete-profile img {
+    width: 600px; /* Set a fixed width */
+    height: 800px; /* Set a fixed height */
+    object-fit: cover; /* Maintain aspect ratio and fill the box */
+    border-radius: 10px; /* Optional: Add some rounded corners */
+    margin-bottom: 20px;
+}
+
+.athlete-profile h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.athlete-profile p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+.paragraphs {
+    text-align: left;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+table {
+    margin: 20px auto;
+    border-collapse: collapse;
+    width: 80%;
+}
+
+td {
+    padding: 8px;
+    border: 1px solid #ddd;
+}
+
+th {
+    padding: 8px;
+    border: 1px solid #ddd;
+    background-color: #f4f4f4;
+}

@@ -5,10 +5,12 @@ import AthleteProfile from './Pages/AthleteProfile';
 
 const App = () => {
   return (
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/athlete-profile/:name" element={<AthleteProfile />} />
       </Routes>
+
   );
 };
 

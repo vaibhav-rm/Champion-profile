@@ -6,9 +6,14 @@ import "./Home.css";
 function Home() {
     return (
         <div>
-            <header>
+            <header className="navbar">
                 <h1>Know Your Favorite Sports Person</h1>
-                <button id="logoutButton">Logout</button>
+                <div className="navbar-controls">
+                    <input type="text" placeholder="Search..." className="search-bar" />
+                    <button className="navbar-button">Home</button>
+                    <button className="navbar-button">About</button>
+                    <button className="navbar-button">Contact</button>
+                </div>
             </header>
 
             <main>
