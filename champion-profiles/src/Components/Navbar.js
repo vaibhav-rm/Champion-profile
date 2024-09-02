@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import './Navbar.css'; // Ensure this path is correct
+import './Navbar.css'; 
 
 function Navbar() {
     const [searchQuery, setSearchQuery] = useState("");
@@ -39,7 +39,7 @@ function Navbar() {
     return (
         <header className="navbar">
             <div className="navbar-header">
-                <h1>Champion</h1>
+                <h1>Champions Profile</h1>
                 <button className="navbar-hamburger" onClick={toggleMenu}>
                     &#9776;
                 </button>

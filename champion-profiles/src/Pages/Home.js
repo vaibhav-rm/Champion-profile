@@ -16,6 +16,12 @@ function Home() {
                 </center>
                 <div className="photo-gallery">
                     <ChampionCard
+                        imgSrc="https://static.iwmbuzz.com/wp-content/uploads/2020/02/the-controversial-life-of-mahendra-singh-dhoni-2-920x518.jpg"
+                      x  altText="MS Dhoni"
+                        name="Mahendra_Singh_Dhoni"
+                        profileLink="/athlete-profile/Mahendra_Singh_Dhoni"
+                    />
+                    <ChampionCard
                         imgSrc="https://cdn.britannica.com/48/252748-050-C514EFDB/Virat-Kohli-India-celebrates-50th-century-Cricket-November-15-2023.jpg"
                         altText="Virat Kohli"
                         name="Virat_Kohli"
@@ -45,12 +51,7 @@ function Home() {
                         name="Cristiano_Ronaldo"
                         profileLink="/athlete-profile/Cristiano_Ronaldo"
                     />
-                    <ChampionCard
-                        imgSrc="https://static.iwmbuzz.com/wp-content/uploads/2020/02/the-controversial-life-of-mahendra-singh-dhoni-2-920x518.jpg"
-                        altText="MS Dhoni"
-                        name="Mahendra_Singh_Dhoni"
-                        profileLink="/athlete-profile/Mahendra_Singh_Dhoni"
-                    />
+
                     <ChampionCard
                         imgSrc="https://img.olympics.com/images/image/private/t_s_pog_staticContent_hero_xl_2x/f_auto/primary/qpr4zk5ybnwg0gpmuctd"
                         altText="Neeraj Chopra"

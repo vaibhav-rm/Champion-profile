@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import './AthleteProfile.css';
-
+        
 const AthleteProfile = () => {
     const { name } = useParams();
     const [athleteData, setAthleteData] = useState({
@@ -14,11 +14,11 @@ const AthleteProfile = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                // Fetch Wikipedia summary data
+                
                 const response = await axios.get(`https://api.allorigins.win/get?url=${encodeURIComponent(`https://en.wikipedia.org/api/rest_v1/page/summary/${name}`)}`);
                 const data = JSON.parse(response.data.contents);
 
-                // Set the data to state
+               
                 setAthleteData({
                     title: data.title || 'N/A',
                     description: data.extract || 'N/A',

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Navbar from "../Components/Navbar"; // Assuming Navbar is a separate component
+import Navbar from "../Components/Navbar"; 
 import "./Contact.css";
 
 const ContactUs = () => {
@@ -7,7 +7,7 @@ const ContactUs = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    setIsSubmitted(true);
+    setIsSubmitted(true); 
   };
 
   return (
